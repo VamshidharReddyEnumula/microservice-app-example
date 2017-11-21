@@ -1,4 +1,4 @@
-version: "3"
+version: "2"
 services:
   frontend:
     build: ./frontend
@@ -18,7 +18,7 @@ services:
     environment:
       AUTH_API_PORT: 8081
       JWT_SECRET: myfancysecret         
-      USERS_API_ADDRESS: "http://users-api:8083"    
+      USERS_API_ADDRESS: "http://users-api:8083"      
     depends_on:
       - users-api     
   
@@ -33,4 +33,4 @@ services:
     environment:
      SERVER_PORT: 8083
      JWT_SECRET: myfancysecret
-    
+      
